@@ -5,8 +5,12 @@ namespace Web.Truck.Domain.Entities
     public class Caminhao : BaseEntity
     {
 
-        public Caminhao()
+        public Caminhao(string chassi, int anoFabricacao, int anoModelo)
         {
+            Chassi = chassi;
+            AnoFabricacao = anoFabricacao;
+            AnoModelo = anoModelo;
+
             Validar(this, new CaminhaoValidator());
         }
 

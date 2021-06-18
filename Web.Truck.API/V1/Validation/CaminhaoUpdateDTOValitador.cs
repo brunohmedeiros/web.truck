@@ -1,13 +1,12 @@
 ﻿using FluentValidation;
 using System;
 using Web.Truck.Domain.DTOs.Caminhao;
-using Web.Truck.Domain.Entities;
 
-namespace Web.Truck.Domain.Validations
+namespace Web.Truck.API.V1.Validation
 {
-    public class CaminhaoValidator : AbstractValidator<Caminhao>
+    public class CaminhaoUpdateDTOValitador : AbstractValidator<CaminhaoUpdateDTO>
     {
-        public CaminhaoValidator()
+        public CaminhaoUpdateDTOValitador()
         {
             RuleFor(x => x)
                 .Must(ValidarAnoFabricacao)
@@ -18,12 +17,12 @@ namespace Web.Truck.Domain.Validations
                 .WithMessage("Ano do Modelo deve ser o ano atual ou subsequente.");
         }
 
-        private static bool ValidarAnoFabricacao(Caminhao x)
+        private static bool ValidarAnoFabricacao(CaminhaoUpdateDTO x)
         {
             return x.AnoFabricacao == DateTime.UtcNow.Year;
         }
 
-        private static bool ValidarAnoModelo(Caminhao x)
+        private static bool ValidarAnoModelo(CaminhaoUpdateDTO x)
         {
             return x.AnoModelo >= DateTime.UtcNow.Year && x.AnoModelo <= (DateTime.UtcNow.Year + 1);
         }

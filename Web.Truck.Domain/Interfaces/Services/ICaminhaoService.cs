@@ -1,4 +1,5 @@
-﻿using Web.Truck.Domain.DTOs.Caminhao;
+﻿using System.Collections.Generic;
+using Web.Truck.Domain.DTOs.Caminhao;
 
 namespace Web.Truck.Domain.Interfaces.Services
 {
@@ -6,8 +7,8 @@ namespace Web.Truck.Domain.Interfaces.Services
     {
         void Adicionar(CaminhaoDTO CaminhaoDTO);
         void Excluir(int Id);
-        CaminhaoDTO Atualizar(int Id, CaminhaoDTO CaminhaoDTO);
-        CaminhaoDTO ObterTodos();
+        CaminhaoListDTO Atualizar(CaminhaoUpdateDTO CaminhaoDTO);
+        IEnumerable<CaminhaoListDTO> ObterTodos();
 
     }
 }

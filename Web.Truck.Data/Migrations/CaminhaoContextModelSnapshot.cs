@@ -35,7 +35,7 @@ namespace Web.Truck.Data.Migrations
                     b.Property<string>("Chassi")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("DataCadastroUtc")
+                    b.Property<DateTime?>("DataCadastro")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -59,7 +59,7 @@ namespace Web.Truck.Data.Migrations
                         .IsRequired()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("DataCadastroUtc")
+                    b.Property<DateTime?>("DataCadastro")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
