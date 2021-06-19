@@ -14,7 +14,7 @@ namespace Web.Truck.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Descricao = table.Column<string>(type: "TEXT", nullable: false),
-                    DataCadastroUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    DataCadastro = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Ativo = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -32,7 +32,7 @@ namespace Web.Truck.Data.Migrations
                     ModeloId = table.Column<int>(type: "INTEGER", nullable: false),
                     AnoFabricacao = table.Column<int>(type: "INTEGER", nullable: false),
                     AnoModelo = table.Column<int>(type: "INTEGER", nullable: false),
-                    DataCadastroUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    DataCadastro = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Ativo = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

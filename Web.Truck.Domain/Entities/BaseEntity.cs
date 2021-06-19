@@ -8,19 +8,20 @@ namespace Web.Truck.Domain.Entities
     {
         public BaseEntity()
         {
-            DataCadastroUtc ??= DateTime.UtcNow;
+            DataCadastro ??= DateTime.Now;
             Ativo ??= true;
         }
 
         public int Id { get; }
-        public DateTime? DataCadastroUtc { get; private set; }
+        public DateTime? DataCadastro { get; private set; }
         public bool? Ativo { get; private set; }
         public bool Valido { get; private set; }
+        public ValidationResult ValidationResult { get; private set; }
 
         public void Validar<T>(T entidade, AbstractValidator<T> validador)
         {
-            ValidationResult validacao = validador.Validate(entidade);
-            Valido = validacao.IsValid;
+            ValidationResult = validador.Validate(entidade);
+            Valido = ValidationResult.IsValid;
         }
     }
 }

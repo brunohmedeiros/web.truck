@@ -11,8 +11,9 @@ namespace Web.Truck.Data.Mapping
             entity.HasKey(x => x.Id);
             entity.Property(x => x.Id).IsRequired();
             entity.Property(x => x.Ativo).IsRequired();
-            entity.Property(x => x.DataCadastroUtc).IsRequired();
+            entity.Property(x => x.DataCadastro).IsRequired();
             entity.Ignore(x => x.Valido);
+            entity.Ignore(x => x.ValidationResult);
         }
     }
 }

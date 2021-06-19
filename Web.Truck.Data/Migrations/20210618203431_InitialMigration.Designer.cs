@@ -9,7 +9,7 @@ using Web.Truck.Data.Context;
 namespace Web.Truck.Data.Migrations
 {
     [DbContext(typeof(CaminhaoContext))]
-    [Migration("20210618120917_InitialMigration")]
+    [Migration("20210618203431_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,7 @@ namespace Web.Truck.Data.Migrations
                     b.Property<string>("Chassi")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("DataCadastroUtc")
+                    b.Property<DateTime?>("DataCadastro")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -61,7 +61,7 @@ namespace Web.Truck.Data.Migrations
                         .IsRequired()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("DataCadastroUtc")
+                    b.Property<DateTime?>("DataCadastro")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
