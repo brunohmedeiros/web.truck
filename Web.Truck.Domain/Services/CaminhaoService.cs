@@ -129,7 +129,7 @@ namespace Web.Truck.Domain.Services
             }
         }
 
-        private int SetModelo(string Modelo)
+        public int SetModelo(string Modelo)
         {
             if (Modelo.ToUpper().Contains("FH") || Modelo.ToUpper().Contains("FM"))
             {

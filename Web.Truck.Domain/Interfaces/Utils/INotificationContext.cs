@@ -10,5 +10,6 @@ namespace Web.Truck.Domain.Interfaces.Utils
         void AddNotifications(ValidationResult validationResult);
 		IEnumerable<Notification> GetNotifications();
         bool HasNotificarion();
+        void ClearNotifications();
     }
 }

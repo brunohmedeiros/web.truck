@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E22BEEA4-B9A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4BD167F2-5146-4B0F-B08F-3279B217896B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Truck.UnitTest", "Web.Truck.UnitTest\Web.Truck.UnitTest.csproj", "{E1A728D0-C820-4240-B19F-9FC35145DFD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Truck.UnitTest", "Web.Truck.UnitTest\Web.Truck.UnitTest.csproj", "{E1A728D0-C820-4240-B19F-9FC35145DFD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,6 +9,6 @@ namespace Web.Truck.Domain.Interfaces.Services
         void Excluir(int Id);
         CaminhaoListDTO Atualizar(CaminhaoUpdateDTO CaminhaoDTO);
         IEnumerable<CaminhaoListDTO> ObterTodos();
-
+        int SetModelo(string Modelo);
     }
 }

@@ -14,6 +14,16 @@ namespace Web.Truck.Domain.Entities
             Validar(this, new CaminhaoValidator());
         }
 
+        public Caminhao(string chassi, int anoFabricacao, int anoModelo, int modeloId)
+        {
+            Chassi = chassi;
+            AnoFabricacao = anoFabricacao;
+            AnoModelo = anoModelo;
+            ModeloId = modeloId;
+
+            Validar(this, new CaminhaoValidator());
+        }
+
         public string Chassi { get; set; }
         public int ModeloId { get; set; }
         public int AnoFabricacao { get; set; }

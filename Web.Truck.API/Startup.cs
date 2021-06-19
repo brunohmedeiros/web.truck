@@ -45,7 +45,7 @@ namespace Web.Truck
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web.Truck", Version = "v1" });
             });
 
-            services.AddAutoMapper(Assembly.GetAssembly(typeof(MapperConfig)));
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(CaminhaoMapper)));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -27,13 +27,12 @@ namespace Web.Truck.Domain.Utils.Notification
 			}
 		}
 
-
-		public void AddNotifications(ICollection<Notification> notifications)
-		{
-			_notifications.AddRange(notifications);
+        public void ClearNotifications()
+        {
+			_notifications.Clear();
 		}
 
-		public IEnumerable<Notification> GetNotifications()
+        public IEnumerable<Notification> GetNotifications()
         {
 			return _notifications;
 		}
